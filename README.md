@@ -8,3 +8,6 @@ TEAM:
 * Mykeal Kenny
 * Chris Honda
 * Nando Theeßen
+
+FOR DEVELOPMENT USE ONLY:
+https://trello.com/b/uWvoMsPT/front-end
