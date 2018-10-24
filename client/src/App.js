@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import Jumbotron from './components/Jumbotron.js';
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
+          <Jumbotron headerText="Test" description="Test" />
           <a
             className="App-link"
             href="https://reactjs.org"
@@ -20,6 +22,7 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        
       </div>
     );
   }
