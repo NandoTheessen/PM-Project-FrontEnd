@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 // import './App.css';
-import Jumbotron from './components/jumbotron/Jumbotron.js';
+import Jumbotron from './Jumbotron.js';
 
 class App extends Component {
   render() {
