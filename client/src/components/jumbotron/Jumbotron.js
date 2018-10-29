@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 
+// Components
+import Button from './button.js';
+
+// CSS
+import './jumbotron.css';
+
 class Jumbotron extends Component {
     render() {
         return (
             <div className="jumbotron">
-                <h1>{this.props.headerText}</h1>
-                <h4>{this.props.description}</h4>
+                <Button className="jumbotron__button" buttonText="This is the buttonText" />
             </div>
         )
     }
