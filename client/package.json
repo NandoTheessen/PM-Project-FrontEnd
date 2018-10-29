@@ -11,7 +11,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "precommit": "lint-staged",
+    "pretty": "prettier --write \"**/*.js\""
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm pretty",
+      "git add"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -24,7 +32,11 @@
   ],
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "husky": "^1.1.2",
+    "lint-staged": "^8.0.0",
+    "prettier": "^1.14.3"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NandoTheessen/PM-Project-FrontEnd.git"
@@ -36,3 +48,4 @@
   },
   "homepage": "https://github.com/NandoTheessen/PM-Project-FrontEnd#readme"
 }
+
