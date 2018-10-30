@@ -1,0 +1,29 @@
+.railroad {
+    background-image: url('./railroad.jpg');
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    top: 0;
+    left: 0;
+    height: 450px;
+}
+
+.forest {
+    background-image: url('./forest.jpg');
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    top: 0;
+    left: 0;
+    height: 450px;
+}
+
+.concrete {
+    background-image: url('./concrete.jpg');
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    top: 0;
+    left: 0;
+    height: 450px;
+}
