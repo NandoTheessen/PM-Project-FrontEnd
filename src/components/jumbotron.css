@@ -1,29 +1,54 @@
-.railroad {
-    background-image: url('./railroad.jpg');
+.jumbotron {
     background-size: cover;
     background-position: center;
+    color: whitesmoke;
     min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     top: 0;
     left: 0;
-    height: 450px;
+    height: 480px;
+    padding-left: 60px;
+}
+
+.railroad {
+    background-image: url('./railroad.jpg');
+}
+
+.railroad h1 {
+    font-size: 48px;
+}
+
+.railroad h4 {
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 12px;
 }
 
 .forest {
     background-image: url('./forest.jpg');
-    background-size: cover;
-    background-position: center;
-    min-width: 100%;
-    top: 0;
-    left: 0;
-    height: 450px;
+    align-items: center;
+}
+
+.forest h2 {
+    font-size: 28px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .concrete {
     background-image: url('./concrete.jpg');
-    background-size: cover;
-    background-position: center;
-    min-width: 100%;
-    top: 0;
-    left: 0;
-    height: 450px;
+}
+
+.concrete h1 {
+    font-size: 48px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.concrete h4 {
+    font-size: 24px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    padding-top: 12px;
 }
