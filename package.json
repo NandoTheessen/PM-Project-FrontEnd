@@ -7,12 +7,16 @@
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.5"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged",
     "pretty": "prettier --write \"**/*.js\""
   },
   "lint-staged": {
