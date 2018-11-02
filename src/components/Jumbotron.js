@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// Components
+import Button from "./Button.js";
+
 // CSS
 import './jumbotron.css';
 
@@ -12,6 +15,8 @@ class Jumbotron extends Component {
                 <h4>{this.props.description}</h4>
                 <br />
                 <h2>{this.props.heading}</h2>
+                <br />
+                <Button className="button" />
             </div>
         )
     }
