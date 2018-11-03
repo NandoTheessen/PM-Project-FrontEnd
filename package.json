@@ -9,7 +9,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
     }
   },
   "scripts": {
@@ -21,8 +22,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "npm run pretty",
-      "npm test"
+      "npm run pretty"
     ]
   },
   "eslintConfig": {
