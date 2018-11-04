@@ -10,7 +10,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npx jest"
+      "pre-push": "cross-env CI=true npm test"
     }
   },
   "scripts": {
@@ -37,6 +37,7 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "husky": "^1.1.2",
     "lint-staged": "^8.0.0",
     "prettier": "^1.14.3"
