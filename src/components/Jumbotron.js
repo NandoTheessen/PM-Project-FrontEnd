@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 // Components
 import Button from "./Button.js";
 
 // CSS
-import './jumbotron.css';
+import "./jumbotron.css";
 
 class Jumbotron extends Component {
     render() {

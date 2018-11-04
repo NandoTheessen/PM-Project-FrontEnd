@@ -7,18 +7,22 @@
     "react-dom": "^16.5.2",
     "react-scripts": "2.0.5"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "cross-env CI=true npm test"
+    }
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged",
     "pretty": "prettier --write \"**/*.js\""
   },
   "lint-staged": {
     "*.js": [
-      "npm pretty",
-      "git add"
+      "npm run pretty"
     ]
   },
   "eslintConfig": {
@@ -33,6 +37,7 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "husky": "^1.1.2",
     "lint-staged": "^8.0.0",
     "prettier": "^1.14.3"
