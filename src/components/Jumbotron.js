@@ -16,7 +16,7 @@ class Jumbotron extends Component {
                 <br />
                 <h2>{this.props.heading}</h2>
                 <br />
-                <Button className="button" />
+                <Button buttonText={this.props.button} />
             </div>
         )
     }

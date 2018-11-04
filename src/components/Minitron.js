@@ -5,21 +5,18 @@ import "./Minitron.css";
 class Minitron extends Component {
     render() {
         return (
-            <div>
+            <div className={this.props.layout} >
                 <h1>{this.props.header}</h1>
                 <h3>{this.props.smallHeader}</h3>
                 <hr />
                 <ul>
-                    {listItems}
+                    {this.props.listItems}
                 </ul>
             </div>
         )
     }
 }
 
-const elements = ["UI/UX", "DATABASE DESIGN", "MOBILE APPS", "BLOGS"];
-const listItems = elements.map((element) => 
-    <li>{element}</li>
-)
+
 
 export default Minitron;
