@@ -3,6 +3,7 @@ import React, { Component } from "react";
 // import './App.css';
 import "./components/jumbotron.css";
 import Jumbotron from "./components/Jumbotron.js";
+import Header from "./components/Header.js";
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             position: "relative"
           }}
         />
+        <Header />
         <Jumbotron
           styling="jumbotron railroad"
           description="Designed by experts in the field"
