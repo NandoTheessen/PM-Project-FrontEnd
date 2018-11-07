@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import Button from "./button.js";
 
 // CSS
+import styled from 'styled-components';
 import "./jumbotron.css";
 
 class Jumbotron extends Component {
