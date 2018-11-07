@@ -14,7 +14,7 @@ class App extends Component {
         <Minitron smallHeader="Services we provide" listItems={listItems} layout="minitron" />
         <Jumbotron styling="jumbotron forest" heading="QUALITY IN EVERYTHING WE DO" button="SHOP IT SOLUTIONS" />
         <Minitron header="POPULAR Services" layout="minitron" />
-        <Jumbotron styling="jumbotron concrete" description="Meet our awesome team members:" title="OUR TEAM" button="Button3" />
+        <Jumbotron styling="jumbotron concrete" description="Meet our awesome team members:" title="OUR TEAM" button="READ MORE" />
       </div>
     );
   }

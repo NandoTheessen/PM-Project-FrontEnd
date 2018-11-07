@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 // Components
-import Button from "./Button.js";
+import Button from "./button.js";
 
 // CSS
 import "./jumbotron.css";

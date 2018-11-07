@@ -14,10 +14,11 @@ const Sausage = styled.button`
     border-color: #ddd;
     padding: 15px;
     font-size: 20px;
+    font-family: Georgia serif;
     line-height: 1.33;
     box-sizing: border-box;
     text-decoration: none;
-    max-width: 10%;
+    max-width: 15%;
 `;
 
 
