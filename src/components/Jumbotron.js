@@ -9,14 +9,12 @@ import styled from "styled-components";
 const Jumbotron = props => {
   function importAll(r) {
     let images = {};
-    r.keys().map((item, index) => {
-      images[item.replace("./", "")] = r(item);
-    });
+    r.keys().map((item, index) => (images[item.replace("./", "")] = r(item)));
     return images;
   }
 
   const images = importAll(require.context("./images", false, /\.(png|jpe?g|svg)$/));
-  console.log(images);
+  const image = `${props.styling}.jpg`;
 
   const Jumbo = styled("div")`
     background-size: cover;
@@ -30,7 +28,7 @@ const Jumbotron = props => {
     left: 0;
     height: 480px;
     padding-left: 60px;
-    background-image: url(${images[props.styling]});
+    background-image: url(${images[image]});
 
     h1 {
       font-size: 48px;

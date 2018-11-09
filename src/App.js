@@ -13,20 +13,20 @@ class App extends Component {
           style={{ height: "75px", width: "100%", backgroundColor: "white", position: "relative" }}
         />
         <Jumbotron
-          styling="railroad.jpg"
+          styling="railroad"
           description="Designed by experts in the field"
           title="IT Solutions"
           button="GET SOLUTION"
         />
         <Minitron smallHeader="Services we provide" listItems={listItems} layout="minitron" />
         <Jumbotron
-          styling="forest.jpg"
+          styling="forest"
           heading="QUALITY IN EVERYTHING WE DO"
           button="SHOP IT SOLUTIONS"
         />
         <Minitron header="POPULAR Services" layout="minitron" />
         <Jumbotron
-          styling="concrete.jpg"
+          styling="concrete"
           description="Meet our awesome team members:"
           title="OUR TEAM"
           button="READ MORE"
