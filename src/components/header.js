@@ -1,6 +1,7 @@
 import React from "react";
 import SearchForm from "./SearchForm";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Headbar = styled.section`
   display: flex;
