@@ -14,7 +14,7 @@ const Header = () => (
   <div>
     <Headbar>
       <div>
-        <a href="/all-products">All Products</a>
+        <Link to="/all-products">All Products</Link>
       </div>
       <div>
         <h1 href="/">Lambda Services</h1>
@@ -23,10 +23,10 @@ const Header = () => (
         <SearchForm />
       </div>
       <div>
-        <a href="/login">Login</a>
+        <Link to="/login">Login</Link>
       </div>
       <div>
-        <a href="/cart">Cart</a>
+        <Link to="/cart">Cart</Link>
       </div>
     </Headbar>
   </div>
