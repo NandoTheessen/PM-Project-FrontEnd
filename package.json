@@ -14,13 +14,13 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "cross-env CI=true npm test --no-verify"
+      "pre-push": "cross-env CI=true npm test"
     }
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --no-verify",
     "eject": "react-scripts eject",
     "pretty": "prettier --write \"**/*.js\""
   },
