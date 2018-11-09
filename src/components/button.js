@@ -21,10 +21,6 @@ const Sausage = styled.button`
   max-width: 15%;
 `;
 
-const Button = ({ className, buttonText }) => (
-  <Sausage className={`${className}`} type="button">
-    {buttonText}
-  </Sausage>
-);
+const Button = ({ buttonText }) => <Sausage type="button">{buttonText}</Sausage>;
 
 export default Button;
