@@ -1,9 +1,17 @@
 import React from "react";
 import SearchForm from "./SearchForm";
-import "./Header.css";
+import styled from "styled-components";
+
+const Headbar = styled.section`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+`;
+
 const Header = () => (
   <div>
-    <div className="Headbar">
+    <Headbar>
       <div>
         <a href="/all-products">All Products</a>
       </div>
@@ -19,7 +27,7 @@ const Header = () => (
       <div>
         <a href="/cart">Cart</a>
       </div>
-    </div>
+    </Headbar>
   </div>
 );
 export default Header;
