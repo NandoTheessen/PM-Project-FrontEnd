@@ -1,35 +1,42 @@
 import React, { Component } from "react";
-// import logo from './logo.svg';
-// import './App.css';
-import "./components/jumbotron.css";
+
 import Jumbotron from "./components/Jumbotron.js";
+import Minitron from "./components/Minitron.js";
+import Header from "./components/Header";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header />
         <div
-          style={{
-            height: "75px",
-            width: "100%",
-            backgroundColor: "white",
-            position: "relative"
-          }}
+          style={{ height: "75px", width: "100%", backgroundColor: "white", position: "relative" }}
         />
         <Jumbotron
-          styling="jumbotron railroad"
+          styling="railroad"
           description="Designed by experts in the field"
           title="IT Solutions"
+          button="GET SOLUTION"
         />
-        <Jumbotron styling="jumbotron forest" heading="QUALITY IN EVERYTHING WE DO" />
+        <Minitron smallHeader="Services we provide" listItems={listItems} layout="minitron" />
         <Jumbotron
-          styling="jumbotron concrete"
+          styling="forest"
+          heading="QUALITY IN EVERYTHING WE DO"
+          button="SHOP IT SOLUTIONS"
+        />
+        <Minitron header="POPULAR Services" layout="minitron" />
+        <Jumbotron
+          styling="concrete"
           description="Meet our awesome team members:"
           title="OUR TEAM"
+          button="READ MORE"
         />
       </div>
     );
   }
 }
+
+const elements = ["UI/UX", "DATABASE DESIGN", "MOBILE APPS", "BLOGS"];
+const listItems = elements.map(element => <li key={element}>{element}</li>);
 
 export default App;
