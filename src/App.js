@@ -3,11 +3,19 @@ import React, { Component } from "react";
 import Jumbotron from "./components/Jumbotron.js";
 import Minitron from "./components/Minitron.js";
 import Header from "./components/Header";
+import styled from "styled-components";
+
+const Container = styled("div")`
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1680px;
+  display: flex;
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Container className="App">
         <Header />
         <div
           style={{ height: "75px", width: "100%", backgroundColor: "white", position: "relative" }}
@@ -31,7 +39,7 @@ class App extends Component {
           title="OUR TEAM"
           button="READ MORE"
         />
-      </div>
+      </Container>
     );
   }
 }
