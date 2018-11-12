@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-router": "^4.3.1",
@@ -10,16 +11,10 @@
     "react-scripts": "2.0.5",
     "styled-components": "^4.0.3"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "cross-env CI=true npm test"
-    }
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --no-verify",
     "eject": "react-scripts eject",
     "pretty": "prettier --write \"**/*.js\""
   },
