@@ -1,36 +1,45 @@
 import React, { Component } from "react";
+import img from "./images/ico/Search.svg";
+import styled from "styled-components";
 
+const SearchButton = styled.button`
+  height: 20px;
+  width: 50px;
+`;
+const SearchFormElement = styled.form`
+  display: flex;
+  align-items: center;
+`;
 class SearchForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: "" };
+  state = {
+    search: ""
+  };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  handleChange = ({ target }) => {
+    this.setState({ search: target.value });
+  };
 
-  handleChange(event) {
-    this.setState({ value: event.target.value });
-  }
-
-  handleSubmit(event) {
-    alert(`Cannot find: ${this.state.value}`);
-    event.preventDefault();
-  }
+  handleSubmit = e => {
+    e.preventDefault();
+    alert(`Cannot find: ${this.state.search}`);
+    this.setState({
+      search: ""
+    });
+  };
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          <input
-            type="text"
-            placeholder="Search Our Shop..."
-            value={this.state.value}
-            onChange={this.handleChange}
-          />
-        </label>
-        <input type="submit" value="imgplaceholder" />
-      </form>
+      <SearchFormElement onSubmit={this.handleSubmit}>
+        <input
+          type="text"
+          placeholder="Search Our Shop..."
+          value={this.state.search}
+          onChange={this.handleChange}
+        />
+        <SearchButton type="button" onClick={this.handleSubmit}>
+          <img src={img} alt="search symbol" />
+        </SearchButton>
+      </SearchFormElement>
     );
   }
 }
