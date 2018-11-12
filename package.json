@@ -14,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --no-verify",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "pretty": "prettier --write \"**/*.js\""
   },
@@ -37,6 +37,7 @@
   "devDependencies": {
     "cross-env": "^5.2.0",
     "husky": "^1.1.2",
+    "jest-dom": "^2.1.1",
     "lint-staged": "^8.0.0",
     "prettier": "^1.14.3",
     "react-testing-library": "^5.2.3"
