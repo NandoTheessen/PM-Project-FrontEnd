@@ -31,7 +31,57 @@ class login extends Component {
     Login = e => {
         e.preventDefault();
 
+        axios.post('http://localhost:3000/login', this.state)
+        .then(res => {
+            localStorage.setItem('jwt', res.data.token)
+            const reqOptions = {
+                headers: {
+                    Authorization: res.data.token,
+                }
+            }
 
+            axios.get('http://localhost:3000/cart', reqOptions)
+            .then(res => {
+                this.props.isLoggedIn(true);
+            })
+            .catch(error => {
+                console.log(error)
+            })
+        })
+        .catch(error => {
+            console.log(error);
+        })
+
+        this.setState({username: '', password: ''})
+    }
+
+    render() {
+        return (
+            <Main>
+                <h2>Login</h2>
+                <form onSubmit={this.Login}>
+                    <div>
+                        <label>Username</label>
+                        <input 
+                            type="text"
+                            name="username"
+                            value={this.state.username}
+                            onChange={this.handleOnChange}
+                        />
+                    </div>
+                    <div>
+                        <label>Password</label>
+                        <input
+                            type="password"
+                            name="password"
+                            value={this.state.password}
+                            onChange={this.handleOnChange}
+                        />
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </Main>
+        );
     }
 }
 
