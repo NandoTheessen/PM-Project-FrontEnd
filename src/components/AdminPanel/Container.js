@@ -13,40 +13,30 @@ class Admin extends Component {
     this.fetchData("orders");
   }
 
-  addProduct = product => {
-    axios
-      .post("whatever address", product)
-      .then(response => this.fetchData("products"))
-      .catch(err => console.log(err));
+  addProduct = async product => {
+    await axios.post("https://shrouded-atoll-78771.herokuapp.com/api/products"
+    , product).catch(err => console.log(err));
+    this.fetchData("products");
   };
 
-  fetchData = name => {
-    axios
-      .get(`https://urlthatisawesome.com/api/${name}`)
-      .then(res => {
-        this.setState({
-          [`${name}`]: res.data[name]
-        });
-      })
+  fetchData = async name => {
+    const response = await axios.get(`https://shrouded-atoll-78771.herokuapp.com/api/${name}`)
       .catch(err => console.log(err));
+    this.setState({
+      [`${name}`]: response.data[name]
+    });
   };
 
-  modifyElement = (element, id, name) => {
-    axios
-      .put(`https://urlthatisawesome.com/api/${name}/:${id}`, element)
-      .then(response => {
-        this.fetchData(name);
-      })
+  modifyElement = async (element, id, name) => {
+    await axios.put(`https://shrouded-atoll-78771.herokuapp.com/api/${name}/:${id}`, element)
       .catch(err => console.log(err));
+    this.fetchData(name);
   };
 
-  deleteElement = (id, name) => {
-    axios
-      .delete(`https://urlthatisawesome.com/api/${name}/:${id}`)
-      .then(response => {
-        this.fetchData(name);
-      })
+  deleteElement = async (id, name) => {
+    await axios.delete(`https://shrouded-atoll-78771.herokuapp.com/api/${name}/:${id}`)
       .catch(err => console.log(err));
+    this.fetchData(name);
   };
 
   render() {
