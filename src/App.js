@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import Jumbotron from "./components/Jumbotron.js";
 import Minitron from "./components/Minitron.js";
-import Header from "./components/Header";
+import Header from "./components/header";
 import styled from "styled-components";
 
 const Container = styled("div")`
